@@ -633,6 +633,9 @@ nav li a:hover span {
   /* position: absolute; */
 }
 
+.fifth .title h1 {
+  color: #000;
+}
 
 .contactcontent {
   position: absolute;
