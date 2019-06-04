@@ -1,4 +1,4 @@
-# Portgolio Przemysław Matkowski
+# Portfolio Przemysław Matkowski
 ## O Stronie
 
 in progress
