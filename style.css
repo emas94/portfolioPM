@@ -810,17 +810,46 @@ nav li a:hover span {
     color: white;
     /* text-align: center; */
     font-size: 40px;
+    transition: .5s;
+    z-index: 6;
   }
 
   .navmobile i {
+
     position: absolute;
     left: 40%;
     top: 40%;
     transform: translate(-50%, -50%);
   }
 
+  .navmobile:hover {
+    cursor: pointer;
+  }
 
+  .navmobile.active {
+    /* transform: scale(1.5); */
+    color: wheat;
+  }
 
+  .asidemobile {
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: -450px;
+    background-color: #000;
+    transition: 2s linear;
+  }
+
+  .navmobile.active+aside {
+    width: 450px;
+  }
+
+  /* 
+  .navmobile:hover~.asidemobile {
+    width: 450px;
+  } */
 }
 
 @media(max-width:860px) {

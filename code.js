@@ -4,6 +4,8 @@
 //   line.style.animation = "line 1 2s .5s linear both"
 
 // })
+
+
 $(document).ready(function () {
 
   $(".about").click(function (event) {
@@ -98,3 +100,9 @@ window.addEventListener("scroll", function () {
 //     document.querySelector(".lala").style.opacity = 0;
 //   }
 // })
+
+const burger = document.querySelector(".navmobile")
+
+burger.addEventListener('click', function () {
+  burger.classList.toggle("active")
+})
