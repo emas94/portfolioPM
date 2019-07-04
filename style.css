@@ -789,14 +789,24 @@ nav li a:hover span {
 }
 
 @media(max-width:1024px) {
+  nav {
+    position: absolute;
+    float: left;
+  }
 
   nav ul {
-    display: none;
+    /* flex-grow: 1; */
+    margin: 0;
+    float: left;
+
   }
+
+
 
   .navmobile {
     display: block;
     position: fixed;
+
     left: 0;
     top: 0;
     width: 100px;
