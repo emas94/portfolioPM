@@ -837,13 +837,13 @@ nav li a:hover span {
     left: 0;
     top: 0;
     bottom: 0;
-    width: -450px;
+    width: -150px;
     background-color: #000;
     transition: 2s linear;
   }
 
   .navmobile.active+aside {
-    width: 450px;
+    width: 50%;
   }
 
   /* 
