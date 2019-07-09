@@ -801,7 +801,9 @@ nav li a:hover span {
 
   }
 
-
+  .navdesktop {
+    display: none;
+  }
 
   .navmobile {
     display: block;
@@ -839,6 +841,7 @@ nav li a:hover span {
   .navmobile.active {
     /* transform: scale(1.5); */
     color: wheat;
+
   }
 
   .asidemobile {
@@ -848,12 +851,48 @@ nav li a:hover span {
     top: 0;
     bottom: 0;
     width: -150px;
+    /* height: 50%; */
     background-color: #000;
     transition: 2s linear;
   }
 
   .navmobile.active+aside {
-    width: 50%;
+    width: 30%;
+  }
+
+  .asidemobile .mobile {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* left: 50%;
+    top: 5%;
+    transform: translateX(-50%); */
+  }
+
+  .asidemobile .mobile ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top: 15%;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* left: 50%;
+
+    transform: translateX(-50%); */
+
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .mobile.active {
+    display: block;
+  }
+
+  .asidemobile .mobile ul a {
+    /* position: absolute; */
   }
 
   /* 
@@ -863,9 +902,7 @@ nav li a:hover span {
 }
 
 @media(max-width:860px) {
-  nav ul {
-    display: none;
-  }
+
 
   .secondcontent p {
     font-size: 12px;
@@ -937,9 +974,7 @@ nav li a:hover span {
 }
 
 @media(max-width:760px) {
-  nav ul {
-    display: none;
-  }
+
 
   .secondcontent p {
     font-size: 11px;
@@ -1012,6 +1047,10 @@ nav li a:hover span {
 }
 
 @media(max-width:703px) {
+
+  .navmobile.active+aside {
+    width: 50%;
+  }
 
   .tech div {
     position: relative;

@@ -102,7 +102,10 @@ window.addEventListener("scroll", function () {
 // })
 
 const burger = document.querySelector(".navmobile")
+const burger1 = document.querySelector(".mobile")
 
 burger.addEventListener('click', function () {
   burger.classList.toggle("active")
+  burger1.classList.toggle("active")
+
 })
