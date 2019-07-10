@@ -20,7 +20,7 @@ $(document).ready(function () {
       scrollTop: $(".second").offset().top + 'px'
     }, 'slow');
   })
-  $(".technologies").click(function (event) {
+  $(".skills").click(function (event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: $(".third").offset().top + 'px'
@@ -107,5 +107,63 @@ const burger1 = document.querySelector(".mobile")
 burger.addEventListener('click', function () {
   burger.classList.toggle("active")
   burger1.classList.toggle("active")
+
+  contactBTN.classList.remove("active");
+  skillsBTN.classList.remove("active");
+  aboutBTN.classList.remove("active");
+  homeBTN.classList.remove("active");
+  projectBTN.classList.remove("active");
+
+})
+// const buttonMenu = document.querySelectorAll("a");
+
+// buttonMenu.addEventListener('click', function () {
+//   burger.classList.toggle("active")
+//   burger1.classList.toggle("active")
+
+// })
+
+const homeBTN = document.querySelector(".mobile .home");
+const aboutBTN = document.querySelector(".mobile .about");
+const skillsBTN = document.querySelector(".mobile .skills");
+const projectBTN = document.querySelector(".mobile .projects");
+const contactBTN = document.querySelector(".mobile .contact");
+
+homeBTN.addEventListener("click", function () {
+  homeBTN.classList.toggle("active");
+  aboutBTN.classList.remove("active");
+  skillsBTN.classList.remove("active");
+  projectBTN.classList.remove("active");
+  contactBTN.classList.remove("active");
+})
+aboutBTN.addEventListener("click", function () {
+  aboutBTN.classList.toggle("active");
+  homeBTN.classList.remove("active");
+  skillsBTN.classList.remove("active");
+  projectBTN.classList.remove("active");
+  contactBTN.classList.remove("active");
+
+})
+
+skillsBTN.addEventListener("click", function () {
+  skillsBTN.classList.toggle("active");
+  aboutBTN.classList.remove("active");
+  homeBTN.classList.remove("active");
+  projectBTN.classList.remove("active");
+  contactBTN.classList.remove("active");
+})
+projectBTN.addEventListener("click", function () {
+  projectBTN.classList.toggle("active");
+  skillsBTN.classList.remove("active");
+  aboutBTN.classList.remove("active");
+  homeBTN.classList.remove("active");
+  contactBTN.classList.remove("active");
+})
+contactBTN.addEventListener("click", function () {
+  contactBTN.classList.toggle("active");
+  skillsBTN.classList.remove("active");
+  aboutBTN.classList.remove("active");
+  homeBTN.classList.remove("active");
+  projectBTN.classList.remove("active");
 
 })
