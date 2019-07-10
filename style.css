@@ -21,6 +21,11 @@ body {
   display: none;
 }
 
+.navdesktop .active {
+  color: wheat;
+  font-weight: bold;
+}
+
 .first {
   margin: auto;
   height: 100vh;

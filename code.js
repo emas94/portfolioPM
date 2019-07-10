@@ -167,3 +167,48 @@ contactBTN.addEventListener("click", function () {
   projectBTN.classList.remove("active");
 
 })
+
+const homeBTND = document.querySelector(".navdesktop .home");
+const aboutBTND = document.querySelector(".navdesktop .about");
+const skillsBTND = document.querySelector(".navdesktop .skills");
+const projectBTND = document.querySelector(".navdesktop .projects");
+const contactBTND = document.querySelector(".navdesktop .contact");
+
+homeBTND.addEventListener("click", function () {
+  homeBTND.classList.add("active");
+  aboutBTND.classList.remove("active");
+  skillsBTND.classList.remove("active");
+  projectBTND.classList.remove("active");
+  contactBTND.classList.remove("active");
+})
+aboutBTND.addEventListener("click", function () {
+  aboutBTND.classList.add("active");
+  homeBTND.classList.remove("active");
+  skillsBTND.classList.remove("active");
+  projectBTND.classList.remove("active");
+  contactBTND.classList.remove("active");
+
+})
+
+skillsBTND.addEventListener("click", function () {
+  skillsBTND.classList.add("active");
+  aboutBTND.classList.remove("active");
+  homeBTND.classList.remove("active");
+  projectBTND.classList.remove("active");
+  contactBTND.classList.remove("active");
+})
+projectBTND.addEventListener("click", function () {
+  projectBTND.classList.add("active");
+  skillsBTND.classList.remove("active");
+  aboutBTND.classList.remove("active");
+  homeBTND.classList.remove("active");
+  contactBTND.classList.remove("active");
+})
+contactBTND.addEventListener("click", function () {
+  contactBTND.classList.add("active");
+  skillsBTND.classList.remove("active");
+  aboutBTND.classList.remove("active");
+  homeBTND.classList.remove("active");
+  projectBTND.classList.remove("active");
+
+})
