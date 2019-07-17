@@ -135,44 +135,44 @@ const skillsBTN = document.querySelector(".mobile .skills");
 const projectBTN = document.querySelector(".mobile .projects");
 const contactBTN = document.querySelector(".mobile .contact");
 
-homeBTN.addEventListener("click", function () {
-  homeBTN.classList.toggle("active");
-  aboutBTN.classList.remove("active");
-  skillsBTN.classList.remove("active");
-  projectBTN.classList.remove("active");
-  contactBTN.classList.remove("active");
-})
-aboutBTN.addEventListener("click", function () {
-  aboutBTN.classList.toggle("active");
-  homeBTN.classList.remove("active");
-  skillsBTN.classList.remove("active");
-  projectBTN.classList.remove("active");
-  contactBTN.classList.remove("active");
+// homeBTN.addEventListener("click", function () {
+//   homeBTN.classList.toggle("active");
+//   aboutBTN.classList.remove("active");
+//   skillsBTN.classList.remove("active");
+//   projectBTN.classList.remove("active");
+//   contactBTN.classList.remove("active");
+// })
+// aboutBTN.addEventListener("click", function () {
+//   aboutBTN.classList.toggle("active");
+//   homeBTN.classList.remove("active");
+//   skillsBTN.classList.remove("active");
+//   projectBTN.classList.remove("active");
+//   contactBTN.classList.remove("active");
 
-})
+// })
 
-skillsBTN.addEventListener("click", function () {
-  skillsBTN.classList.toggle("active");
-  aboutBTN.classList.remove("active");
-  homeBTN.classList.remove("active");
-  projectBTN.classList.remove("active");
-  contactBTN.classList.remove("active");
-})
-projectBTN.addEventListener("click", function () {
-  projectBTN.classList.toggle("active");
-  skillsBTN.classList.remove("active");
-  aboutBTN.classList.remove("active");
-  homeBTN.classList.remove("active");
-  contactBTN.classList.remove("active");
-})
-contactBTN.addEventListener("click", function () {
-  contactBTN.classList.toggle("active");
-  skillsBTN.classList.remove("active");
-  aboutBTN.classList.remove("active");
-  homeBTN.classList.remove("active");
-  projectBTN.classList.remove("active");
+// skillsBTN.addEventListener("click", function () {
+//   skillsBTN.classList.toggle("active");
+//   aboutBTN.classList.remove("active");
+//   homeBTN.classList.remove("active");
+//   projectBTN.classList.remove("active");
+//   contactBTN.classList.remove("active");
+// })
+// projectBTN.addEventListener("click", function () {
+//   projectBTN.classList.toggle("active");
+//   skillsBTN.classList.remove("active");
+//   aboutBTN.classList.remove("active");
+//   homeBTN.classList.remove("active");
+//   contactBTN.classList.remove("active");
+// })
+// contactBTN.addEventListener("click", function () {
+//   contactBTN.classList.toggle("active");
+//   skillsBTN.classList.remove("active");
+//   aboutBTN.classList.remove("active");
+//   homeBTN.classList.remove("active");
+//   projectBTN.classList.remove("active");
 
-})
+// })
 
 const homeBTND = document.querySelector(".navdesktop .home");
 const aboutBTND = document.querySelector(".navdesktop .about");
@@ -180,44 +180,44 @@ const skillsBTND = document.querySelector(".navdesktop .skills");
 const projectBTND = document.querySelector(".navdesktop .projects");
 const contactBTND = document.querySelector(".navdesktop .contact");
 
-homeBTND.addEventListener("click", function () {
-  homeBTND.classList.add("active");
-  aboutBTND.classList.remove("active");
-  skillsBTND.classList.remove("active");
-  projectBTND.classList.remove("active");
-  contactBTND.classList.remove("active");
-})
-aboutBTND.addEventListener("click", function () {
-  aboutBTND.classList.add("active");
-  homeBTND.classList.remove("active");
-  skillsBTND.classList.remove("active");
-  projectBTND.classList.remove("active");
-  contactBTND.classList.remove("active");
+// homeBTND.addEventListener("click", function () {
+//   homeBTND.classList.add("active");
+//   aboutBTND.classList.remove("active");
+//   skillsBTND.classList.remove("active");
+//   projectBTND.classList.remove("active");
+//   contactBTND.classList.remove("active");
+// })
+// aboutBTND.addEventListener("click", function () {
+//   aboutBTND.classList.add("active");
+//   homeBTND.classList.remove("active");
+//   skillsBTND.classList.remove("active");
+//   projectBTND.classList.remove("active");
+//   contactBTND.classList.remove("active");
 
-})
+// })
 
-skillsBTND.addEventListener("click", function () {
-  skillsBTND.classList.add("active");
-  aboutBTND.classList.remove("active");
-  homeBTND.classList.remove("active");
-  projectBTND.classList.remove("active");
-  contactBTND.classList.remove("active");
-})
-projectBTND.addEventListener("click", function () {
-  projectBTND.classList.add("active");
-  skillsBTND.classList.remove("active");
-  aboutBTND.classList.remove("active");
-  homeBTND.classList.remove("active");
-  contactBTND.classList.remove("active");
-})
-contactBTND.addEventListener("click", function () {
-  contactBTND.classList.add("active");
-  skillsBTND.classList.remove("active");
-  aboutBTND.classList.remove("active");
-  homeBTND.classList.remove("active");
-  projectBTND.classList.remove("active");
+// skillsBTND.addEventListener("click", function () {
+//   skillsBTND.classList.add("active");
+//   aboutBTND.classList.remove("active");
+//   homeBTND.classList.remove("active");
+//   projectBTND.classList.remove("active");
+//   contactBTND.classList.remove("active");
+// })
+// projectBTND.addEventListener("click", function () {
+//   projectBTND.classList.add("active");
+//   skillsBTND.classList.remove("active");
+//   aboutBTND.classList.remove("active");
+//   homeBTND.classList.remove("active");
+//   contactBTND.classList.remove("active");
+// })
+// contactBTND.addEventListener("click", function () {
+//   contactBTND.classList.add("active");
+//   skillsBTND.classList.remove("active");
+//   aboutBTND.classList.remove("active");
+//   homeBTND.classList.remove("active");
+//   projectBTND.classList.remove("active");
 
-})
+// })
 
 const popup1 = document.querySelector('.modal-wrap-p1');
 const buttonP1 = document.querySelector('.projectArea .project1 button');
@@ -299,6 +299,11 @@ function startLine() {
 
     line[0].classList.add("start");
     line[0].classList.remove("back");
+    //   homeBTND.classList.add("active");
+    //   aboutBTND.classList.remove("active");
+    //   skillsBTND.classList.remove("active");
+    //   projectBTND.classList.remove("active");
+    //   contactBTND.classList.remove("active");
   } else {
     line[0].classList.remove("start");
     line[0].classList.add("back");
@@ -328,12 +333,63 @@ function startLine() {
     line[4].classList.add("start");
     line[4].classList.remove("back");
   } else {
-    line[4].classList.remove("start");
-    line[4].classList.add("back");
+    // line[4].classList.remove("start");
+    // line[4].classList.add("back");
   }
-  console.log(fifth)
+  // console.log(fifth)
 
 }
 
 
 window.addEventListener('scroll', startLine)
+
+
+function lightSection() {
+
+  const first = document.querySelector('.first').clientHeight;
+  const second = document.querySelector('.second').clientHeight;
+  const third = document.querySelector('.third').clientHeight;
+  const fourth = document.querySelector('.fourth').clientHeight;
+  const fifth = document.querySelector('.fifth').clientHeight;
+  const spaceBetweemSecondAndFirst = document.querySelector('.second').offsetTop;
+  const spaceBetweemSecondAndSecond = document.querySelector('.third').offsetTop;
+  const spaceBetweemSecondAndThird = document.querySelector('.fourth').offsetTop;
+  const spaceBetweemSecondAndFourth = document.querySelector('.fifth').offsetTop;
+
+  // const fourth = document.querySelector('.fourth');
+  const scrollSize = window.scrollY;
+  if (scrollSize < first) {
+    console.log("chujnia")
+    homeBTND.classList.add("active");
+    aboutBTND.classList.remove("active");
+    aboutBTND.classList.remove("active");
+    skillsBTND.classList.remove("active");
+    projectBTND.classList.remove("active");
+    contactBTND.classList.remove("active");
+  } else if (scrollSize < second + spaceBetweemSecondAndFirst) {
+    console.log("chujnia")
+    aboutBTND.classList.add("active");
+    homeBTND.classList.remove("active");
+    skillsBTND.classList.remove("active");
+  } else if (scrollSize < third + spaceBetweemSecondAndSecond) {
+    skillsBTND.classList.add("active");
+    aboutBTND.classList.remove("active");
+    homeBTND.classList.remove("active");
+    projectBTND.classList.remove("active");
+    contactBTND.classList.remove("active");
+  } else if (scrollSize < fourth + spaceBetweemSecondAndThird) {
+    projectBTND.classList.add("active");
+    skillsBTND.classList.remove("active");
+    aboutBTND.classList.remove("active");
+    homeBTND.classList.remove("active");
+    contactBTND.classList.remove("active");
+  } else {
+    contactBTND.classList.add("active");
+    skillsBTND.classList.remove("active");
+    aboutBTND.classList.remove("active");
+    homeBTND.classList.remove("active");
+    projectBTND.classList.remove("active");
+  }
+}
+
+window.addEventListener('scroll', lightSection);
