@@ -13,6 +13,10 @@ body {
   /* overflow-X: hidden; */
 }
 
+body.active {
+  filter: blur(5px);
+}
+
 .navmobile {
   display: none;
 }
@@ -247,9 +251,21 @@ nav li a:hover span {
   /* position: relative; */
   height: 2px;
   width: 0;
-  animation: line 1 2s .5s linear both;
-  background-color: white;
 
+  background-color: white;
+  animation-play-state: paused;
+
+}
+
+.line.start {
+  /* animation-play-state: running; */
+  animation: line 1 2s .5s linear both;
+
+}
+
+.line.back {
+  /* animation: line 1 2s .5s linear reverse; */
+  /* animation-direction: reverse; */
 }
 
 .title {
@@ -381,6 +397,7 @@ nav li a:hover span {
 
 
 .fourth {
+  /* position: relative; */
   background-color: white;
   color: #000;
 
@@ -391,203 +408,214 @@ nav li a:hover span {
 }
 
 .fourthcontent {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 5%;
-  justify-content: space-around;
-
-  ;
+  height: 100%;
 }
 
-.fourthcontent div {
-  background-color: rgb(52, 52, 52);
-  margin-bottom: 25px;
+.projectArea {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-top: 5%; */
+  justify-content: space-around;
+  align-items: center;
 
-  /* transform: rotate(45deg); */
-  height: 400px;
-  flex-basis: 400px;
+}
+
+.projectArea div {
+  background-color: rgb(52, 52, 52);
+
+  transform: translatey(-50%);
+  height: 45vh;
+  flex-basis: 25vw;
   border-radius: 10%;
   box-shadow: 8px 8px 15px #000;
 }
 
-
-.fourthcontent div:nth-child(1) {
-  position: relative;
-  overflow: hidden;
-}
-
-.fourthcontent div:nth-child(2) {}
-
-.fourthcontent div:nth-child(1) img {
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  /* display: block;
-  position: absolute; */
-  z-index: 1;
-  /* background-size: cover; */
-  border-radius: 10%;
-  /* transform: rotate(-45deg) translateY(-18%); */
-  /* transition: .2s; */
-}
-
-.fourthcontent div:nth-child(1):hover img {
-  /* opacity: 0; */
-  z-index: -1;
-}
-
-.fourthcontent div:nth-child(1) div {
-  position: absolute;
-  width: 100%;
-  height: 20% !important;
-  border: 5px white solid;
-  border-radius: 50px;
-
-  top: 80% !important;
-}
-
-.fourthcontent div:nth-child(1) div span {
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  background-color: white;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.fourthcontent div:nth-child(1) div p:nth-of-type(1) {
-  position: absolute;
-  left: 10%;
-  top: 25%;
-  transform: translateY(-50%);
-  font-size: 44px;
-}
-
-.fourthcontent div:nth-child(1) div p:nth-of-type(2) {
-  position: absolute;
-  right: 3%;
-  top: 25%;
-  transform: translateY(-50%);
-  font-size: 44px;
-}
-
-.fourthcontent div:nth-child(1) div p a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.fourthcontent div:nth-child(1) h1 {
-  margin-top: 15%;
+.projectArea div h1 {
+  /* margin: 0 auto; */
   text-align: center;
-  font-size: 30px;
-  color: wheat;
-  font-weight: bold;
-
   padding: 5px;
-
-  /* opacity: 0; */
-  z-index: 0;
+  color: white;
+  /* font-family: serif; */
 }
 
-.fourthcontent div p {
-  font-size: 24px;
+.projectArea div img {
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  float: left;
 
-  margin-top: 5%;
+}
+
+.projectArea div button {
+  /* display: block; */
+  /* position: absolute; */
+  font-size: 30px;
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 50px;
+  transition: .3s linear;
+  border: 5px solid rgb(100, 107, 117);
+  cursor: pointer;
+  /* margin-top: 50%; */
+}
+
+.projectArea div button:hover {
+  background-color: wheat;
   color: white;
+  border: 5px solid black;
   /* font-weight: bold; */
-  padding: 5px;
-  text-align: center;
-
-  /* opacity: 0; */
-  z-index: 0;
 }
 
-.fourthcontent div:nth-child(2) p {
-  font-size: 18px;
-}
-
-.fourthcontent div:nth-child(2) {
-  position: relative;
-  overflow: hidden;
-}
-
-.fourthcontent div:nth-child(2) img {
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  /* display: block;
-  position: absolute; */
-  z-index: 1;
-  /* background-size: cover; */
-  border-radius: 10%;
-  /* transform: rotate(-45deg) translateY(-18%); */
-  /* transition: .2s; */
-}
-
-.fourthcontent div:nth-child(2):hover img {
-  /* opacity: 0; */
-  z-index: -1;
-}
-
-.fourthcontent div:nth-child(2) div {
-  position: absolute;
-  width: 100%;
-  height: 20% !important;
-  border: 5px white solid;
-  border-radius: 50px;
-
-  top: 80% !important;
-}
-
-.fourthcontent div:nth-child(2) div span {
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  background-color: white;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.fourthcontent div:nth-child(2) div p:nth-of-type(1) {
-  position: absolute;
-  left: 10%;
-  top: 25%;
-  transform: translateY(-50%);
-  font-size: 44px;
-}
-
-.fourthcontent div:nth-child(2) div p:nth-of-type(2) {
-  position: absolute;
-  right: 3%;
-  top: 25%;
-  transform: translateY(-50%);
-  font-size: 44px;
-}
-
-.fourthcontent div:nth-child(2) div p a {
-  text-decoration: none;
+.projectArea div p {
+  overflow: scroll;
+  /* overflow: hidden; */
+  flex-grow: 2;
   color: white;
-  font-weight: bold;
+  margin: 15px;
+
 }
 
-.fourthcontent div:nth-child(2) h1 {
-  margin-top: 15%;
+.projectArea div p::-webkit-scrollbar {
+  display: none;
+}
+
+
+.project1,
+.project2,
+.project3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.modal-wrap-p1,
+.modal-wrap-p2,
+.modal-wrap-p3 {
+  display: none;
+
+}
+
+.modal-wrap-p1.active {
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: .5s linear;
+}
+
+.modal-wrap-p2.active {
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: .5s linear;
+}
+
+.modal-wrap-p3.active {
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: .5s linear;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  background-color: #fff;
+  border: 5px solid black;
+
+}
+
+.modal .top {
+  flex-basis: 10%;
+  background-color: rgb(107, 101, 101);
+
+}
+
+.modal .top h1 {
   text-align: center;
-  font-size: 30px;
-  color: wheat;
-  font-weight: bold;
+  /* padding: 10px; */
+  line-height: 100px;
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px black;
+  font-family: '', cursive;
+}
 
-  padding: 5px;
+.modal .mid {
+  flex-grow: 1;
+  background-color: rgb(37, 36, 36);
+}
 
-  /* opacity: 0; */
-  z-index: 0;
+.modal .mid iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.modal .bot {
+  flex-basis: 10%;
+  background-color: rgb(107, 101, 101);
+}
+
+.modal .bot p {
+  text-align: center;
+  /* padding: 10px; */
+  line-height: 100px;
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 2px 2px 4px black;
+  font-family: 'Indie Flower', cursive;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 38px;
+  border-radius: 50%;
+  border: 5px solid black;
+  box-sizing: content-box;
+  transform: translate(50%, -50%);
+  background-color: #fff;
+  cursor: pointer;
 }
 
 
-.fourthcontent div div:nth-child(2) {}
+
 
 .navmobile {
   display: none;
@@ -653,8 +681,9 @@ nav li a:hover span {
   left: 50%;
   width: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: -1;
   padding: 15px;
+  background-color: #fff;
 }
 
 .fifthbg {
@@ -674,7 +703,7 @@ nav li a:hover span {
   flex-wrap: nowrap;
   height: 50vh;
   box-shadow: 0px 0px 10px 15px black;
-  z-index: 3;
+  /* z-index: 3; */
 }
 
 .contactcontent a {
@@ -742,48 +771,7 @@ nav li a:hover span {
     height: 300px;
   }
 
-  .fourthcontent {
-    margin-top: 5%;
-  }
 
-  .fourthcontent div {
-    height: 550px;
-    flex-basis: 550px;
-  }
-
-  .fourthcontent div:nth-child(1) img {
-    height: 550px;
-    width: 550px;
-  }
-
-  .fourthcontent div:nth-child(2) img {
-    height: 550px;
-    width: 550px;
-  }
-
-  .fourthcontent div p {
-    font-size: 32px;
-  }
-
-  .fourthcontent div:nth-child(2) p {
-    font-size: 28px;
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(1) {
-    left: 15%;
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(2) {
-    right: 10%;
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(1) {
-    left: 15%;
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(2) {
-    right: 10%;
-  }
 }
 
 @media (max-width:1180px) {
@@ -851,6 +839,7 @@ nav li a:hover span {
   .navmobile.active {
     /* transform: scale(1.5); */
     color: wheat;
+    font-weight: bold;
 
   }
 
@@ -861,10 +850,10 @@ nav li a:hover span {
     left: 0;
     top: 0;
     bottom: 0;
-    width: -150px;
+    width: -30%;
     /* height: 50%; */
     background-color: #000;
-    transition: 2s linear;
+    transition: 5s linear;
   }
 
   .navmobile.active+aside {
@@ -875,6 +864,7 @@ nav li a:hover span {
     position: relative;
     width: 100%;
     height: 100%;
+
     /* left: 50%;
     top: 5%;
     transform: translateX(-50%); */
@@ -896,10 +886,17 @@ nav li a:hover span {
 
   .mobile {
     display: none;
+    transition: 5s linear;
   }
 
   .mobile.active {
     display: block;
+    /* font-weight: bold; */
+  }
+
+  .mobile ul .active {
+    color: wheat;
+    font-weight: bold;
   }
 
   .asidemobile .mobile ul a {
@@ -910,7 +907,49 @@ nav li a:hover span {
   .navmobile:hover~.asidemobile {
     width: 450px;
   } */
+
+
+
+  .projectArea div {
+    height: 40vh;
+    flex-basis: 30vw;
+  }
+
+  .projectArea div h1 {
+    font-size: 24px;
+    padding: 8px;
+    /* margin-top: 50%; */
+    /* line-height: 30%; */
+    height: 30%;
+  }
+
+  .projectArea div:nth-child(1) h1 {
+    padding-top: 10%;
+  }
+
+  .projectArea div img {
+    display: none;
+  }
+
+  .projectArea div button {
+    font-size: 24px;
+    padding: 5px;
+  }
+
+  .projectArea div p {
+    text-align: justify;
+  }
+
+
+  .modal .top h1 {
+    font-size: 24px;
+  }
+
+  .modal .bot p {
+    font-size: 24px;
+  }
 }
+
 
 @media(max-width:860px) {
 
@@ -919,69 +958,7 @@ nav li a:hover span {
     font-size: 12px;
   }
 
-  .fourthcontent {
-    margin-top: 25%;
-  }
 
-  .fourthcontent div {
-    height: 350px;
-    flex-basis: 350px;
-  }
-
-  .fourthcontent div:nth-child(1) img {
-    height: 350px;
-    width: 350px;
-  }
-
-  .fourthcontent div:nth-child(2) img {
-    height: 350px;
-    width: 350px;
-  }
-
-  .fourthcontent div h1 {
-    font-size: 24px !important;
-  }
-
-  .fourthcontent div p {
-    font-size: 16px;
-
-  }
-
-  .fourthcontent div:nth-child(2) p {
-    font-size: 16px;
-
-  }
-
-  .fourthcontent div:nth-child(1) div p a {
-    font-size: 24px;
-
-  }
-
-  .fourthcontent div:nth-child(2) div p a {
-    font-size: 24px;
-
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(1) {
-    left: 15%;
-    top: 10%;
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(2) {
-    right: 10%;
-    top: 10%;
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(1) {
-    left: 15%;
-    top: 10%;
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(2) {
-    right: 10%;
-    top: 10%;
-
-  }
 }
 
 @media(max-width:760px) {
@@ -991,70 +968,6 @@ nav li a:hover span {
     font-size: 11px;
   }
 
-  .fourthcontent {
-    margin-top: 25%;
-  }
-
-  .fourthcontent div {
-    height: 300px;
-    flex-basis: 300px;
-  }
-
-  .fourthcontent div:nth-child(1) img {
-    height: 300px;
-    width: 300px;
-  }
-
-  .fourthcontent div:nth-child(2) img {
-    height: 300px;
-    width: 300px;
-  }
-
-  .fourthcontent div h1 {
-    font-size: 24px !important;
-  }
-
-  .fourthcontent div p {
-    font-size: 16px;
-
-  }
-
-  .fourthcontent div:nth-child(2) p {
-    /* margin-top: 5px; */
-    font-size: 12px;
-
-  }
-
-  .fourthcontent div:nth-child(1) div p a {
-    font-size: 24px;
-
-  }
-
-  .fourthcontent div:nth-child(2) div p a {
-    font-size: 24px;
-
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(1) {
-    left: 15%;
-    top: 10%;
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(2) {
-    right: 10%;
-    top: 10%;
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(1) {
-    left: 15%;
-    top: 10%;
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(2) {
-    right: 10%;
-    top: 10%;
-
-  }
 }
 
 @media(max-width:703px) {
@@ -1122,6 +1035,7 @@ nav li a:hover span {
   .mobile .active {
     color: wheat;
     font-weight: bold;
+
   }
 
   .title {
@@ -1175,68 +1089,4 @@ nav li a:hover span {
     margin: 5px;
   }
 
-  .fourthcontent {
-    margin-top: 5%;
-  }
-
-  .fourthcontent div {
-    height: 220px;
-    flex-basis: 220px;
-  }
-
-  .fourthcontent div:nth-child(1) img {
-    height: 220px;
-    width: 220px;
-  }
-
-  .fourthcontent div:nth-child(2) img {
-    height: 220px;
-    width: 220px;
-  }
-
-  .fourthcontent div h1 {
-    font-size: 16px !important;
-  }
-
-  .fourthcontent div p {
-    font-size: 12px;
-
-  }
-
-  .fourthcontent div:nth-child(2) p {
-    font-size: 8px;
-
-  }
-
-  .fourthcontent div:nth-child(1) div p a {
-    font-size: 22px;
-
-  }
-
-  .fourthcontent div:nth-child(2) div p a {
-    font-size: 22px;
-
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(1) {
-    left: 10%;
-    top: 0;
-  }
-
-  .fourthcontent div:nth-child(1) div p:nth-of-type(2) {
-    right: 5%;
-    top: 0;
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(1) {
-    left: 10%;
-    top: 0;
-
-  }
-
-  .fourthcontent div:nth-child(2) div p:nth-of-type(2) {
-    right: 5%;
-    top: 0;
-
-  }
 }

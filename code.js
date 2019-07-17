@@ -5,55 +5,61 @@
 
 // })
 
+$('nav ul li a').on('click', function () {
+  const goToSection = "." + $(this).attr('id');
+  // console.log(goToSection);
+  $('body, html').animate({
+    scrollTop: $(goToSection).offset().top
+  });
+})
+// $(document).ready(function () {
 
-$(document).ready(function () {
-
-  $(".about").click(function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(".second").offset().top + 'px'
-    }, 'slow');
-  })
-  $(".meetme").click(function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(".second").offset().top + 'px'
-    }, 'slow');
-  })
-  $(".skills").click(function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(".third").offset().top + 'px'
-    }, 'slow');
-  })
-  $(".projects").click(function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(".fourth").offset().top + 'px'
-    }, 'slow');
-  })
-  $(".contact").click(function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(".fifth").offset().top + 'px'
-    }, 'slow');
-  })
-  $(".home").click(function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(".first").offset().top + 'px'
-    }, 'slow');
-  })
-  $(".arrow").click(function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $(".first").offset().top + 'px'
-    }, 'slow');
-  })
+//   $(".about").click(function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//       scrollTop: $(".second").offset().top + 'px'
+//     }, 'slow');
+//   })
+//   $(".meetme").click(function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//       scrollTop: $(".second").offset().top + 'px'
+//     }, 'slow');
+//   })
+//   $(".skills").click(function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//       scrollTop: $(".third").offset().top + 'px'
+//     }, 'slow');
+//   })
+//   $(".projects").click(function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//       scrollTop: $(".fourth").offset().top + 'px'
+//     }, 'slow');
+//   })
+//   $(".contact").click(function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//       scrollTop: $(".fifth").offset().top + 'px'
+//     }, 'slow');
+//   })
+//   $(".home").click(function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//       scrollTop: $(".first").offset().top + 'px'
+//     }, 'slow');
+//   })
+//   $(".arrow").click(function (event) {
+//     event.preventDefault();
+//     $('html, body').animate({
+//       scrollTop: $(".first").offset().top + 'px'
+//     }, 'slow');
+//   })
 
 
-});
-let navBAR = document.querySelector('nav');
+// });
+let navBAR = document.querySelector('.navdesktop1');
 
 window.addEventListener("scroll", function () {
   if (window.scrollY != 0) {
@@ -212,3 +218,122 @@ contactBTND.addEventListener("click", function () {
   projectBTND.classList.remove("active");
 
 })
+
+const popup1 = document.querySelector('.modal-wrap-p1');
+const buttonP1 = document.querySelector('.projectArea .project1 button');
+const close1 = document.querySelector('.modal-wrap-p1 .close');
+buttonP1.addEventListener('click', function () {
+  popup1.classList.toggle("active");
+
+  navBAR.style.display = "none";
+  btnUP1.style.display = "none";
+
+})
+close1.addEventListener('click', function () {
+  popup1.classList.toggle("active");
+  navBAR.style.display = "block";
+  btnUP1.style.display = "block";
+
+})
+
+
+
+const popup2 = document.querySelector('.modal-wrap-p2');
+const buttonP2 = document.querySelector('.projectArea .project2 button');
+const close2 = document.querySelector('.modal-wrap-p2 .close');
+buttonP2.addEventListener('click', function () {
+  popup2.classList.toggle("active");
+
+  navBAR.style.display = "none";
+  btnUP1.style.display = "none";
+
+})
+close2.addEventListener('click', function () {
+  popup2.classList.toggle("active");
+  navBAR.style.display = "block";
+  btnUP1.style.display = "block";
+
+})
+const popup3 = document.querySelector('.modal-wrap-p3');
+const buttonP3 = document.querySelector('.projectArea .project3 button');
+const close3 = document.querySelector('.modal-wrap-p3 .close');
+buttonP3.addEventListener('click', function () {
+  popup3.classList.toggle("active");
+
+  navBAR.style.display = "none";
+  btnUP1.style.display = "none";
+})
+close3.addEventListener('click', function () {
+  popup3.classList.toggle("active");
+  navBAR.style.display = "block";
+  btnUP1.style.display = "block";
+})
+
+// const line = document.querySelectorAll('.line');
+// const fourth = document.querySelector('.fourth');
+// document.addEventListener('scroll', function () {
+//   if (document.scrollBy > fourth.offsetTop) {
+//     for (var i = 0; i < line.length; i++)
+//       line[i].classList.add("start");
+//   } else {
+//     for (var i = 0; i < line.length; i++)
+//       line[i].classList.add("back");
+//   }
+// })
+function startLine() {
+  const line = document.querySelectorAll('.line');
+  const first = document.querySelector('.first').clientHeight;
+  const second = document.querySelector('.second').clientHeight;
+  const third = document.querySelector('.third').clientHeight;
+  const fourth = document.querySelector('.fourth').clientHeight;
+  const fifth = document.querySelector('.fifth').clientHeight;
+  const spaceBetweemSecondAndFirst = document.querySelector('.second').offsetTop;
+  const spaceBetweemSecondAndSecond = document.querySelector('.third').offsetTop;
+  const spaceBetweemSecondAndThird = document.querySelector('.fourth').offsetTop;
+  const spaceBetweemSecondAndFourth = document.querySelector('.fifth').offsetTop;
+
+  // const fourth = document.querySelector('.fourth');
+  const scrollSize = window.scrollY;
+
+  if (scrollSize >= first) {
+
+    line[0].classList.add("start");
+    line[0].classList.remove("back");
+  } else {
+    line[0].classList.remove("start");
+    line[0].classList.add("back");
+  }
+  if (scrollSize >= second + spaceBetweemSecondAndFirst) {
+    line[1].classList.add("start");
+    line[1].classList.remove("back");
+  } else {
+    line[1].classList.remove("start");
+    line[1].classList.add("back");
+  }
+  if (scrollSize >= third + spaceBetweemSecondAndSecond) {
+    line[2].classList.add("start");
+    line[2].classList.remove("back");
+  } else {
+    line[2].classList.remove("start");
+    line[2].classList.add("back");
+  }
+  if (scrollSize >= fourth + spaceBetweemSecondAndThird) {
+    line[3].classList.add("start");
+    line[3].classList.remove("back");
+  } else {
+    line[3].classList.remove("start");
+    line[3].classList.add("back");
+  }
+  if (scrollSize >= fifth + spaceBetweemSecondAndFourth) {
+    line[4].classList.add("start");
+    line[4].classList.remove("back");
+  } else {
+    line[4].classList.remove("start");
+    line[4].classList.add("back");
+  }
+  console.log(fifth)
+
+}
+
+
+window.addEventListener('scroll', startLine)
