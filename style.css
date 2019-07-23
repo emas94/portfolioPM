@@ -323,11 +323,17 @@ nav li a:hover span {
   /* margin-top: 150px; */
   width: 70%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-150vw);
   height: 70%;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  transition: 2s linear;
+
+}
+
+.tech.active {
+  transform: translateX(-50%);
 }
 
 .tech div {
@@ -409,6 +415,7 @@ nav li a:hover span {
 
 .fourthcontent {
   height: 100%;
+  overflow: hidden;
 }
 
 .projectArea {
@@ -418,7 +425,12 @@ nav li a:hover span {
   /* margin-top: 5%; */
   justify-content: space-around;
   align-items: center;
+  transform: translateX(100vw) scale(.5);
+  transition: 2s linear;
+}
 
+.projectArea.active {
+  transform: translateX(0) scale(1);
 }
 
 .projectArea div {
