@@ -351,6 +351,8 @@ function lightSection() {
   const third = document.querySelector('.third').clientHeight;
   const fourth = document.querySelector('.fourth').clientHeight;
   const fifth = document.querySelector('.fifth').clientHeight;
+  const tech = document.querySelector('.tech');
+  const project = document.querySelector('.projectArea');
   const spaceBetweemSecondAndFirst = document.querySelector('.second').offsetTop;
   const spaceBetweemSecondAndSecond = document.querySelector('.third').offsetTop;
   const spaceBetweemSecondAndThird = document.querySelector('.fourth').offsetTop;
@@ -366,29 +368,40 @@ function lightSection() {
     skillsBTND.classList.remove("active");
     projectBTND.classList.remove("active");
     contactBTND.classList.remove("active");
+    tech.classList.remove("active");
+    project.classList.remove("active");
   } else if (scrollSize < second + spaceBetweemSecondAndFirst) {
 
     aboutBTND.classList.add("active");
     homeBTND.classList.remove("active");
     skillsBTND.classList.remove("active");
+    tech.classList.remove("active");
+    project.classList.remove("active");
   } else if (scrollSize < third + spaceBetweemSecondAndSecond) {
     skillsBTND.classList.add("active");
+    tech.classList.add("active");
     aboutBTND.classList.remove("active");
     homeBTND.classList.remove("active");
     projectBTND.classList.remove("active");
     contactBTND.classList.remove("active");
-  } else if (scrollSize < fourth + spaceBetweemSecondAndThird) {
+    project.classList.remove("active");
+  } else if (scrollSize < ((fourth / 2) + spaceBetweemSecondAndThird)) {
+    console.log((fourth) + spaceBetweemSecondAndThird);
     projectBTND.classList.add("active");
+    project.classList.add("active");
     skillsBTND.classList.remove("active");
     aboutBTND.classList.remove("active");
     homeBTND.classList.remove("active");
     contactBTND.classList.remove("active");
+    tech.classList.remove("active");
   } else {
     contactBTND.classList.add("active");
     skillsBTND.classList.remove("active");
     aboutBTND.classList.remove("active");
     homeBTND.classList.remove("active");
     projectBTND.classList.remove("active");
+    tech.classList.remove("active");
+    project.classList.remove("active");
   }
 }
 
@@ -403,8 +416,7 @@ function lightSectionMobile() {
   const third = document.querySelector('.third').clientHeight;
   const fourth = document.querySelector('.fourth').clientHeight;
   const fifth = document.querySelector('.fifth').clientHeight;
-  const tech = document.querySelector('.tech');
-  const project = document.querySelector('.projectArea');
+
   const spaceBetweemSecondAndFirst = document.querySelector('.second').offsetTop;
   const spaceBetweemSecondAndSecond = document.querySelector('.third').offsetTop;
   const spaceBetweemSecondAndThird = document.querySelector('.fourth').offsetTop;
@@ -421,41 +433,38 @@ function lightSectionMobile() {
     skillsBTN.classList.remove("active");
     projectBTN.classList.remove("active");
     contactBTN.classList.remove("active");
-    tech.classList.remove("active");
-    project.classList.remove("active");
+
 
   } else if (scrollSize < second + spaceBetweemSecondAndFirst) {
 
     aboutBTN.classList.add("active");
     homeBTN.classList.remove("active");
     skillsBTN.classList.remove("active");
-    tech.classList.remove("active");
-    project.classList.remove("active");
+
 
   } else if (scrollSize < third + spaceBetweemSecondAndSecond) {
     skillsBTN.classList.add("active");
-    tech.classList.add("active");
+
     aboutBTN.classList.remove("active");
     homeBTN.classList.remove("active");
     projectBTN.classList.remove("active");
     contactBTN.classList.remove("active");
-    project.classList.remove("active");
+
   } else if (scrollSize < fourth + spaceBetweemSecondAndThird) {
     projectBTN.classList.add("active");
-    project.classList.add("active");
+
     skillsBTN.classList.remove("active");
     aboutBTN.classList.remove("active");
     homeBTN.classList.remove("active");
     contactBTN.classList.remove("active");
-    tech.classList.remove("active");
+
   } else {
     contactBTN.classList.add("active");
     skillsBTN.classList.remove("active");
     aboutBTN.classList.remove("active");
     homeBTN.classList.remove("active");
     projectBTN.classList.remove("active");
-    tech.classList.remove("active");
-    project.classList.remove("active");
+
   }
 }
 
