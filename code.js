@@ -351,8 +351,7 @@ function lightSection() {
   const third = document.querySelector('.third').clientHeight;
   const fourth = document.querySelector('.fourth').clientHeight;
   const fifth = document.querySelector('.fifth').clientHeight;
-  const tech = document.querySelector('.tech');
-  const project = document.querySelector('.projectArea');
+
   const spaceBetweemSecondAndFirst = document.querySelector('.second').offsetTop;
   const spaceBetweemSecondAndSecond = document.querySelector('.third').offsetTop;
   const spaceBetweemSecondAndThird = document.querySelector('.fourth').offsetTop;
@@ -368,40 +367,37 @@ function lightSection() {
     skillsBTND.classList.remove("active");
     projectBTND.classList.remove("active");
     contactBTND.classList.remove("active");
-    tech.classList.remove("active");
-    project.classList.remove("active");
+
   } else if (scrollSize < second + spaceBetweemSecondAndFirst) {
 
     aboutBTND.classList.add("active");
     homeBTND.classList.remove("active");
     skillsBTND.classList.remove("active");
-    tech.classList.remove("active");
-    project.classList.remove("active");
+
   } else if (scrollSize < third + spaceBetweemSecondAndSecond) {
     skillsBTND.classList.add("active");
-    tech.classList.add("active");
+
     aboutBTND.classList.remove("active");
     homeBTND.classList.remove("active");
     projectBTND.classList.remove("active");
     contactBTND.classList.remove("active");
-    project.classList.remove("active");
-  } else if (scrollSize < ((fourth / 2) + spaceBetweemSecondAndThird)) {
-    console.log((fourth) + spaceBetweemSecondAndThird);
+
+  } else if (scrollSize < (fourth + spaceBetweemSecondAndThird)) {
+
     projectBTND.classList.add("active");
-    project.classList.add("active");
+
     skillsBTND.classList.remove("active");
     aboutBTND.classList.remove("active");
     homeBTND.classList.remove("active");
     contactBTND.classList.remove("active");
-    tech.classList.remove("active");
+
   } else {
     contactBTND.classList.add("active");
     skillsBTND.classList.remove("active");
     aboutBTND.classList.remove("active");
     homeBTND.classList.remove("active");
     projectBTND.classList.remove("active");
-    tech.classList.remove("active");
-    project.classList.remove("active");
+
   }
 }
 
@@ -469,3 +465,45 @@ function lightSectionMobile() {
 }
 
 window.addEventListener('scroll', lightSectionMobile);
+
+//animate data in section
+function addData() {
+
+  const first = document.querySelector('.first').clientHeight;
+  const second = document.querySelector('.second').clientHeight;
+  const third = document.querySelector('.third').clientHeight;
+  const fourth = document.querySelector('.fourth').clientHeight;
+  const fifth = document.querySelector('.fifth').clientHeight;
+  const tech = document.querySelector('.tech');
+  const project = document.querySelector('.projectArea');
+  const spaceBetweemSecondAndFirst = document.querySelector('.second').offsetTop;
+  const spaceBetweemSecondAndSecond = document.querySelector('.third').offsetTop;
+  const spaceBetweemSecondAndThird = document.querySelector('.fourth').offsetTop;
+  const spaceBetweemSecondAndFourth = document.querySelector('.fifth').offsetTop;
+
+  // const fourth = document.querySelector('.fourth');
+  const scrollSize = window.scrollY;
+  if (scrollSize < first) {
+
+
+    tech.classList.remove("active");
+    project.classList.remove("active");
+  } else if (scrollSize < second / 2 + spaceBetweemSecondAndFirst) {
+
+
+  } else if (scrollSize < third / 2 + spaceBetweemSecondAndSecond) {
+
+    tech.classList.add("active");
+
+
+  } else if (scrollSize < (fourth / 2 + spaceBetweemSecondAndThird)) {
+
+    project.classList.add("active");
+
+  } else {
+
+
+  }
+}
+
+window.addEventListener('scroll', addData);

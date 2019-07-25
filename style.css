@@ -8,10 +8,11 @@
 
 }
 
+/* 
 body {
 
-  /* overflow-X: hidden; */
-}
+  overflow-x: hidden;
+} */
 
 body.active {
   filter: blur(5px);
@@ -678,22 +679,28 @@ nav li a:hover span {
 }
 
 .fifth {
-
+  position: relative;
   color: white;
   /* position: absolute; */
 }
 
-.fifth .title h1 {
+.fifth .title {
   color: #000;
+  /* background-color: #000; */
+}
+
+.fifth .title .line {
+  background-color: #000;
 }
 
 .contactcontent {
   position: absolute;
-  /* margin: auto; */
+  margin: auto;
+  overflow: hidden;
   left: 50%;
   width: 50%;
   transform: translateX(-50%);
-  z-index: -1;
+  /* z-index: -1; */
   padding: 15px;
   background-color: #fff;
 }
@@ -720,59 +727,35 @@ nav li a:hover span {
 
 .contactcontent a {
   text-decoration: none;
-  font-size: 32px;
+  /* font-size: 32px; */
 }
 
 .contactcontent div {
   position: relative;
-  /* margin: 5px; */
-  /* display: block; */
-
-
-
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  flex-wrap: nowrap;
+  line-height: 50px;
   text-decoration: none;
   color: white;
-  /* left: 50%;
-  top: 50%; */
-  font-size: 32px;
-  /* transform: translate(-50%, -50%); */
-  /* height: 50px; */
-}
+  font-size: 28px;
+  color: #000;
 
-.contactcontent a p {
-  /* margin-top: -25px; */
 }
 
 
 
 
-.contactcontent div:nth-child(1),
-.contactcontent div:nth-child(1) a p,
-.contactcontent div:nth-child(1) a {
 
-  /* padding-bottom: 52px; */
-  /* line-height: 100%; */
-  color: black;
-}
-
-.contactcontent div:nth-child(1) a i {
+.contactcontent div i {
+  display: block;
   font-size: 50px;
-  /* bottom: -50%; */
-  /* position: absolkute; */
+  min-width: 70px;
 
 }
 
-.contactcontent div:nth-child(2) {
-  color: black;
-}
 
-.contactcontent div:nth-child(3) {}
-
-.contactcontent div:nth-child(4) {}
-
-.contactcontent div:nth-child(5) {}
-
-.contactcontent div:nth-child(6) {}
 
 @media (min-width:1800px) {
   .tech div {
@@ -960,6 +943,40 @@ nav li a:hover span {
   .modal .bot p {
     font-size: 24px;
   }
+
+  .contactcontent {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 40%;
+    padding: 13% 0 0 5%;
+  }
+
+  .fifth .title h1 {
+    margin: 0;
+    /* padding: 0; */
+  }
+
+  .contactcontent div {
+
+    margin: 0 0 15px 0;
+    line-height: 35px;
+    font-size: 16px;
+
+
+  }
+
+
+
+
+
+  .contactcontent div i {
+    display: block;
+    font-size: 35px;
+    min-width: 40px;
+
+  }
+
 }
 
 
