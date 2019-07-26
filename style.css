@@ -41,6 +41,39 @@ body.active {
 
 }
 
+.language {
+  position: fixed;
+  display: block;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  z-index: 3;
+
+}
+
+.language img {
+  /* position: absolute; */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.language img:nth-of-type(1).active {
+  display: block;
+}
+
+.language img:nth-of-type(2).active {
+  display: block;
+}
+
+.language img:nth-of-type(1) {
+  display: none;
+}
+
+.language img:nth-of-type(2) {
+  display: none;
+}
+
 .welcome {
   position: absolute;
   left: 50%;
@@ -231,13 +264,16 @@ nav li a:hover span {
   display: block;
   /* z-index: ; */
   /* width: 60%; */
-  max-height: 50%;
-  margin-left: 150px;
+  transform: translateY(-25%);
+  height: 80vh;
+  max-height: 75%;
+  margin-left: 20px;
 
 
 }
 
 .secondcontent p {
+  text-align: justify;
   margin-top: 50px;
   max-width: 30vw;
 }
@@ -699,10 +735,15 @@ nav li a:hover span {
   overflow: hidden;
   left: 50%;
   width: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0);
   /* z-index: -1; */
   padding: 15px;
   background-color: #fff;
+  transition: 2s linear;
+}
+
+.contactcontent.active {
+  transform: translateX(-50%) scale(1);
 }
 
 .fifthbg {
@@ -722,6 +763,7 @@ nav li a:hover span {
   flex-wrap: nowrap;
   height: 50vh;
   box-shadow: 0px 0px 10px 15px black;
+  padding: 5% 0 0 5%;
   /* z-index: 3; */
 }
 
@@ -741,6 +783,7 @@ nav li a:hover span {
   color: white;
   font-size: 28px;
   color: #000;
+
 
 }
 
@@ -815,7 +858,7 @@ nav li a:hover span {
     color: white;
     /* text-align: center; */
     font-size: 40px;
-    transition: .5s;
+    transition: .5s linear both;
     z-index: 6;
   }
 
@@ -881,7 +924,7 @@ nav li a:hover span {
 
   .mobile {
     display: none;
-    transition: 5s linear;
+    transition: .5s linear both;
   }
 
   .mobile.active {
@@ -946,10 +989,14 @@ nav li a:hover span {
 
   .contactcontent {
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     width: 90%;
     height: 40%;
     padding: 13% 0 0 5%;
+  }
+
+  .contactcontent.active {
+    transform: translate(-50%, -50%) scale(1);
   }
 
   .fifth .title h1 {
@@ -977,6 +1024,13 @@ nav li a:hover span {
 
   }
 
+  .secondcontent img {
+    margin-left: 10%;
+  }
+
+  .secondcontent p {
+    max-width: 45%;
+  }
 }
 
 

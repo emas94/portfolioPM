@@ -110,6 +110,12 @@ window.addEventListener("scroll", function () {
 const burger = document.querySelector(".navmobile")
 const burger1 = document.querySelector(".mobile")
 
+const homeBTN = document.querySelector(".mobile .home");
+const aboutBTN = document.querySelector(".mobile .about");
+const skillsBTN = document.querySelector(".mobile .skills");
+const projectBTN = document.querySelector(".mobile .projects");
+const contactBTN = document.querySelector(".mobile .contact");
+
 burger.addEventListener('click', function () {
   burger.classList.toggle("active")
   burger1.classList.toggle("active")
@@ -121,6 +127,28 @@ burger.addEventListener('click', function () {
   projectBTN.classList.remove("active");
 
 })
+const buttonsMobile = [homeBTN, aboutBTN, skillsBTN, projectBTN, contactBTN];
+
+buttonsMobile[0].addEventListener('click', function () {
+  burger.classList.remove("active");
+  burger1.classList.remove("active")
+})
+buttonsMobile[1].addEventListener('click', function () {
+  burger.classList.remove("active");
+  burger1.classList.remove("active")
+})
+buttonsMobile[2].addEventListener('click', function () {
+  burger.classList.remove("active");
+  burger1.classList.remove("active")
+})
+buttonsMobile[3].addEventListener('click', function () {
+  burger.classList.remove("active");
+  burger1.classList.remove("active")
+})
+buttonsMobile[4].addEventListener('click', function () {
+  burger.classList.remove("active");
+  burger1.classList.remove("active")
+})
 // const buttonMenu = document.querySelectorAll("a");
 
 // buttonMenu.addEventListener('click', function () {
@@ -129,11 +157,7 @@ burger.addEventListener('click', function () {
 
 // })
 
-const homeBTN = document.querySelector(".mobile .home");
-const aboutBTN = document.querySelector(".mobile .about");
-const skillsBTN = document.querySelector(".mobile .skills");
-const projectBTN = document.querySelector(".mobile .projects");
-const contactBTN = document.querySelector(".mobile .contact");
+
 
 // homeBTN.addEventListener("click", function () {
 //   homeBTN.classList.toggle("active");
@@ -476,6 +500,7 @@ function addData() {
   const fifth = document.querySelector('.fifth').clientHeight;
   const tech = document.querySelector('.tech');
   const project = document.querySelector('.projectArea');
+  const contact = document.querySelector('.contactcontent');
   const spaceBetweemSecondAndFirst = document.querySelector('.second').offsetTop;
   const spaceBetweemSecondAndSecond = document.querySelector('.third').offsetTop;
   const spaceBetweemSecondAndThird = document.querySelector('.fourth').offsetTop;
@@ -485,7 +510,7 @@ function addData() {
   const scrollSize = window.scrollY;
   if (scrollSize < first) {
 
-
+    contact.classList.remove("active");
     tech.classList.remove("active");
     project.classList.remove("active");
   } else if (scrollSize < second / 2 + spaceBetweemSecondAndFirst) {
@@ -501,9 +526,25 @@ function addData() {
     project.classList.add("active");
 
   } else {
-
+    contact.classList.add("active");
 
   }
 }
 
 window.addEventListener('scroll', addData);
+
+
+const languageButton = document.querySelector('.language');
+let languageFlagPL = document.querySelector('.language img:nth-of-type(1)');
+let languageFlagEN = document.querySelector('.language img:nth-of-type(2)');
+let i = 0;
+
+function changeLanguage() {
+  languageFlagEN.classList.toggle("active");
+  languageFlagPL.classList.toggle("active");
+}
+
+
+
+
+languageButton.addEventListener('click', changeLanguage);
