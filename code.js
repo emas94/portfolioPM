@@ -548,3 +548,36 @@ function changeLanguage() {
 
 
 languageButton.addEventListener('click', changeLanguage);
+
+// change language
+const homeMenu = document.querySelector(' .home span:nth-of-type(2) ');
+const aboutMenu = document.querySelector('.about span:nth-of-type(2)');
+const skillsMenu = document.querySelector('.skills span:nth-of-type(2)');
+const projectsMenu = document.querySelector('.projects span:nth-of-type(2)');
+const contactMenu = document.querySelector('.contact span:nth-of-type(2)');
+const welcome1 = document.querySelector('.welcome p');
+const welcome2 = document.querySelector('.welcome p span');
+const meetme = document.querySelector('.meetme');
+
+function subText() {
+  if (languageFlagEN.classList.contains("active") == true) {
+    homeMenu.textContent = "Strona Główna";
+    aboutMenu.textContent = "O mnie";
+    skillsMenu.textContent = "Umiejętności";
+    projectsMenu.textContent = "Projekty";
+    contactMenu.textContent = "Kontakt";
+    welcome1.textContent = "Witaj w moim";
+    welcome2.textContent = "Świecie";
+    meetme.textContent = "Poznaj mnie";
+  } else {
+    homeMenu.textContent = "Home";
+    aboutMenu.textContent = "About me";
+    skillsMenu.textContent = "Skills";
+    projectsMenu.textContent = "Projects";
+    contactMenu.textContent = "Contact";
+    welcome1.textContent = "Welcome in my";
+    welcome2.textContent = "WORLD";
+    meetme.textContent = "Meet me"
+  }
+}
+languageButton.addEventListener('click', subText);

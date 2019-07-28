@@ -48,6 +48,7 @@ body.active {
   right: 10px;
   border-radius: 50%;
   z-index: 3;
+  overflow: hidden;
 
 }
 
@@ -60,10 +61,13 @@ body.active {
 
 .language img:nth-of-type(1).active {
   display: block;
+
 }
 
 .language img:nth-of-type(2).active {
   display: block;
+
+  /* height: 90px; */
 }
 
 .language img:nth-of-type(1) {
@@ -1085,8 +1089,8 @@ nav li a:hover span {
     position: relative;
     /* float: left; */
     margin: 10px;
-    flex-basis: 100px;
-    height: 100px;
+    flex-basis: 90px;
+    height: 90px;
     /* height: 250px; */
     /* margin-right: 0; */
 
@@ -1162,14 +1166,82 @@ nav li a:hover span {
     min-width: 50vw;
     font-size: 10px;
     padding: 0;
-    margin: 0 0 0 10px;
+    margin: 0 auto 0 auto;
   }
 
   .secondcontent img {
+    display: none;
     max-width:
       45vw;
-    height: 50%;
+    height: 80vh;
     margin: 5px;
   }
 
+  .contactcontent div {
+
+    margin: 0 0 15px 0;
+    line-height: 35px;
+    font-size: 12px;
+
+
+  }
+
+  .contactcontent {
+    padding: 5% 0 5% 5%;
+  }
+
+  .project1,
+  .project2,
+  .project3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectArea {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* flex-grow: 4; */
+  }
+
+  .fourthcontent {
+    height: 90vh;
+  }
+
+  .projectArea div {
+    position: relative;
+    background-color: rgb(52, 52, 52);
+    max-height: 162px;
+    max-width: 162px;
+    flex-basis: 170px;
+    border-radius: 10%;
+    box-shadow: 8px 8px 15px #000;
+    transform: translateY(0);
+
+
+  }
+
+  .projectArea div h1 {
+    font-size: 18px;
+  }
+
+  .projectArea div p {
+    display: none;
+  }
+
+  .projectArea div:nth-of-type(1) p {
+    text-align: left;
+    display: block;
+    font-size: 10px;
+    margin: 0 5px 5px 5px;
+  }
+
+  .projectArea div button {
+    position: absolute;
+    margin: 0 0 0 0;
+    font-size: 14px;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+  }
 }
